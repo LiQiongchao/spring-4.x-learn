@@ -15,10 +15,11 @@ public class LoginLogDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    private final static String INSERT_LOGIN_LOG_SQL = "INSET INTO t_login_log(user_id, ip, login_datetime) VALUES(?,?,?)";
+    private final static String INSERT_LOGIN_LOG_SQL = "INSERT INTO t_login_log(user_id, ip, login_datetime) VALUES(?, ?, ?)";
 
     public void insertLoginLog(LoginLog loginLog) {
-        jdbcTemplate.update(INSERT_LOGIN_LOG_SQL, new Object[]{loginLog.getUserId(), loginLog.getIp(), loginLog.getLoginDate()});
+        int update = jdbcTemplate.update(INSERT_LOGIN_LOG_SQL, loginLog.getUserId(), loginLog.getIp(), loginLog.getLoginDate());
+        System.out.println(update);
     }
 
 }

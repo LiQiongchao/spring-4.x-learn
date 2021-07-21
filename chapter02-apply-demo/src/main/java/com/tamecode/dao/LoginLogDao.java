@@ -18,8 +18,7 @@ public class LoginLogDao {
     private final static String INSERT_LOGIN_LOG_SQL = "INSERT INTO t_login_log(user_id, ip, login_datetime) VALUES(?, ?, ?)";
 
     public void insertLoginLog(LoginLog loginLog) {
-        int update = jdbcTemplate.update(INSERT_LOGIN_LOG_SQL, loginLog.getUserId(), loginLog.getIp(), loginLog.getLoginDate());
-        System.out.println(update);
+        jdbcTemplate.update(INSERT_LOGIN_LOG_SQL, loginLog.getUserId(), loginLog.getIp(), loginLog.getLoginDate());
     }
 
 }

@@ -1,4 +1,4 @@
-package com.tamecode.dao;
+package com.tamecode.domain;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
 package com.tamecode.web;
 
-import com.tamecode.dao.LoginCommand;
+import com.tamecode.domain.LoginCommand;
 import com.tamecode.domain.User;
 import com.tamecode.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

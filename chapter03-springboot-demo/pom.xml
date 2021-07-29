@@ -10,17 +10,20 @@
         <version>2.5.3</version>
     </parent>
 -->
-    <parent>
+    <!--<parent>
         <artifactId>spring-4.x-learn</artifactId>
         <groupId>com.tamecode</groupId>
         <version>1.0-SNAPSHOT</version>
-    </parent>
+    </parent>-->
+
+    <groupId>com.tamecode</groupId>
     <artifactId>chapter03-springboot-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>chapter03-springboot-demo</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
+        <springboot.version>2.3.11.RELEASE</springboot.version>
     </properties>
 
     <!-- ①导入springBoot方式二 -->
@@ -29,7 +32,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-parent</artifactId>
-                <version>2.3.11.RELEASE</version>
+                <version>${springboot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -66,6 +69,21 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${springboot.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>springloaded</artifactId>
+                        <version>1.2.6.RELEASE</version>
+                    </dependency>
+                </dependencies>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

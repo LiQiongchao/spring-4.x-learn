@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>chapter02-apply-demo</artifactId>
     <packaging>war</packaging>
-    <name>Spring4.x实战示例</name>
+    <name>chapter02-spring-demo</name>
 
     <dependencies>
         <!-- spring 依赖-->
